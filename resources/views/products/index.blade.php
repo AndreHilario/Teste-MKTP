@@ -50,7 +50,9 @@
                 @endforeach
             </tbody>
         </table>
-
+        <div>
+            <button onclick="window.location='{{ route('product.create') }}'">Cadastrar produto</button>
+        </div>
     </div>
 </body>
 </html>

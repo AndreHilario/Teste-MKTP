@@ -6,7 +6,7 @@
         <title>Document</title>
     </head>
 <body>
-    <h1>Criar produto</h1>
+    <h1>Cadastrar produto</h1>
 
     <div>
         @if($errors->any())
@@ -15,7 +15,7 @@
                 <li>{{$error}}</li>
             @endforeach
         </ul>
-        
+
         @endif
 
     </div>
