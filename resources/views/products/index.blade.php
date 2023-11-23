@@ -8,6 +8,13 @@
 <body>
     <h1>Produtos</h1>
     <div>
+        @if(session()->has('success'))
+            <div>
+                {{session('success')}}
+            </div>
+        @endif
+    </div>
+    <div>
         <table border="2">
             <thead>
                 <tr>
@@ -16,6 +23,7 @@
                     <th>Link da Imagem</th>
                     <th>Preço</th>
                     <th>CEP do Galpão</th>
+                    <th>Editar</th>
                 </tr>
             </thead>
             <tbody>
@@ -24,8 +32,11 @@
                         <td>{{ $product->id_code }}</td>
                         <td>{{ $product->name }}</td>
                         <td>{{ $product->url }}</td>
-                        <td>{{ $product->price }}</td>
+                        <td>R${{ $product->price }}</td>
                         <td>{{ $product->cep }}</td>
+                        <td>
+                            <a href="{{ route('product.edit', ['product' => $product])  }}">Editar</a>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
