@@ -24,6 +24,8 @@
                     <th>Preço</th>
                     <th>CEP do Galpão</th>
                     <th>Editar</th>
+                    <th>Deletar</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -36,6 +38,13 @@
                         <td>{{ $product->cep }}</td>
                         <td>
                             <a href="{{ route('product.edit', ['product' => $product])  }}">Editar</a>
+                        </td>
+                        <td>
+                            <form method="post" action="{{  route('product.delete', ['product' => $product])  }}">
+                                @csrf
+                                @method('delete')
+                                <input type="submit" value="Deletar" />
+                            </form>
                         </td>
                     </tr>
                 @endforeach

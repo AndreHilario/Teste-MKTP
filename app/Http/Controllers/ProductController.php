@@ -11,6 +11,7 @@ class ProductController extends Controller
         $products = Product::all();
         return view('products.index', ['products'=> $products]);
     }
+    
     public function create() {
         return view('products.create');
     }
@@ -44,5 +45,10 @@ class ProductController extends Controller
         $product->update($data);
 
         return redirect()->route('product.index')->with('success','Produto atualizado com sucesso!');
+    }
+
+    public function delete(Product $product) {
+        $product->delete();
+        return redirect()->route('product.index')->with('success','Produto deletado com sucesso!');
     }
 }
