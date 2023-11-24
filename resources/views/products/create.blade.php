@@ -27,27 +27,32 @@
             <div class="mb-4">
                 <label class="block text-gray-700 font-bold mb-2 text-lg" for="id_code">Código:</label>
                 <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-lg" 
-                       id="id_code" type="text" name="id_code" placeholder="Código de identificação" value="{{ old('id_code') }}" />
-            </div>
+                       id="id_code" type="text" name="id_code" placeholder="Código de identificação" value="{{ old('id_code') }}" 
+                       pattern="[A-Za-z0-9]+" title="Apenas letras e números são permitidos" required />
+            </div>            
             <div class="mb-4">
                 <label class="block text-gray-700 text-lg font-bold mb-2" for="name">Nome:</label>
                 <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-lg" 
-                       id="name" type="text" name="name" placeholder="Nome" value="{{ old('name') }}" />
+                       id="name" type="text" name="name" placeholder="Nome" value="{{ old('name') }}" required />
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700 text-lg font-bold mb-2" for="url">Link:</label>
                 <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-lg" 
-                       id="url" type="url" name="url" placeholder="Url" value="{{ old('url') }}" />
+                       id="url" type="url" name="url" placeholder="Url" value="{{ old('url') }}" required />
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700 text-lg font-bold mb-2" for="price">Preço:</label>
                 <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-lg" 
-                       id="price" type="text" name="price" placeholder="Preço (ex: 100.00)" value="{{ old('price') }}" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
+                       id="price" type="text" name="price" placeholder="Preço (ex: 100.00)" value="{{ old('price') }}" 
+                       pattern="^\d+(\.\d{1,2})?$" title="Por favor, insira um valor válido (ex: 100.00)"
+                       oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required />
             </div>            
             <div class="mb-4">
                 <label class="block text-gray-700 text-lg font-bold mb-2" for="cep">CEP:</label>
                 <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-lg" 
-                       id="cep" type="text" name="cep" placeholder="CEP (ex: xxxxx-xxx)" value="{{ old('cep') }}" onchange="searchNeighborhood(this.value)"/>
+                       id="cep" type="text" name="cep" placeholder="CEP (ex: xxxxx-xxx)" 
+                       value="{{ old('cep') }}" onchange="searchNeighborhood(this.value)" 
+                       pattern="\d{5}-\d{3}" title="O CEP deve seguir o formato correto (ex: xxxxx-xxx)" required />
                 <p id="neighborhood" class="text-gray-600 text-sm mt-2"></p> 
             </div>
             <div class="mb-6 text-lg">
@@ -57,7 +62,7 @@
         </form>
         
         <script src="{{ asset('js/searchNeighborhood.js') }}"></script>
-        
+
     </body>
     
 </html>
