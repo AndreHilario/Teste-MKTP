@@ -8,18 +8,16 @@
 <body>
     <h1>Cadastrar produto</h1>
 
-    <div>
-        @if($errors->any())
-        <ul>
-            @foreach($errors->all() as $error)
-                <li>{{$error}}</li>
-            @endforeach
-        </ul>
-
-        @endif
-
-    </div>
-
+    @if ($errors->any())
+        <div>
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    
     <form method="post" action="{{route('product.store')}}">
         @csrf
         @method('post')

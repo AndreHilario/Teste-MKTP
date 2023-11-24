@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreUpdate;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -16,31 +17,20 @@ class ProductController extends Controller
         return view('products.create');
     }
 
-    public function store(Request $request) {
-        $data = $request->validate([
-            'id_code'=> 'required|regex:/^\w+$/i', 
-            'name'=> 'required|string',
-            'url'=> 'required|url', 
-            'price'=> 'required|numeric|min:0',
-            'cep'=> ['required', 'regex:/^\d{5}-\d{3}$/'], 
-        ]);
+    public function store(StoreUpdate $request) {
+        $data = $request->validated();
 
         $newProduct = Product::create($data);
-        return redirect()->route('product.index')->with('success', $newProduct);
+
+        return redirect()->route('product.index');
     }
 
     public function edit(Product $product) {
         return view('products.edit', ['product'=> $product]);
     }
 
-    public function update(Product $product, Request $request) {
-        $data = $request->validate([
-            'id_code'=> 'required|regex:/^\w+$/i', 
-            'name'=> 'required|string',
-            'url'=> 'required|url', 
-            'price'=> 'required|numeric|min:0',
-            'cep'=> ['required', 'regex:/^\d{5}-\d{3}$/'], 
-        ]);
+    public function update(Product $product, StoreUpdate $request) {
+        $data = $request->all();
 
         $product->update($data);
 
