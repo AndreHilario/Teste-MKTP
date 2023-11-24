@@ -25,8 +25,8 @@
                         <th class="border border-gray-700 px-4 py-2 text-lg">Link da Imagem</th>
                         <th class="border border-gray-700 px-4 py-2 text-lg">Preço</th>
                         <th class="border border-gray-700 px-4 py-2 text-lg">CEP do Galpão</th>
-                        <th class="border border-gray-700 px-4 py-2 text-lg">Editar</th>
-                        <th class="border border-gray-700 px-4 py-2 text-lg">Deletar</th>
+                        <th class="border border-gray-700 px-4 py-2 text-lg bg-gray-400">Ações</th>
+                        <th class="border border-gray-700 px-4 py-2 text-lg bg-gray-400">Ações</th>
                     </tr>
                 </thead>
                 <tbody>
