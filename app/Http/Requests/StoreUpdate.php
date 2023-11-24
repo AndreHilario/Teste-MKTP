@@ -22,11 +22,11 @@ class StoreUpdate extends FormRequest
     public function rules(): array
     {
         return [
-            'id_code' => 'required|regex:/^\w+$/i',
-            'name' => 'required|string',
+            'id_code' => 'required|unique:products|regex:/^\w+$/i',
+            'name' => 'required|string|min:1|max:100',
             'url' => 'required|url',
-            'price' => 'required|numeric',
-            'cep' => ['required', 'regex:/^\d{5}-\d{3}$/'],
-        ];
+            'price' => 'required|regex:/^\d+(\.\d{1,2})?$/',
+            'cep' => 'required|regex:/^\d{5}-\d{3}$/',
+        ];        
     }
 }

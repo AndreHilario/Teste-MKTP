@@ -18,10 +18,10 @@ class ProductController extends Controller
     }
 
     public function store(StoreUpdate $request) {
-        $data = $request->validated();
+        $validatedData = $request->validated();
 
-        $newProduct = Product::create($data);
-
+        $newProduct = Product::create($validatedData);
+        
         return redirect()->route('product.index');
     }
 
