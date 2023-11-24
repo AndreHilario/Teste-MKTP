@@ -47,13 +47,17 @@
             <div class="mb-4">
                 <label class="block text-gray-700 text-lg font-bold mb-2" for="cep">CEP:</label>
                 <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-lg" 
-                       id="cep" type="text" name="cep" placeholder="CEP (ex: xxxxx-xxx)" value="{{ old('cep') }}" />
+                       id="cep" type="text" name="cep" placeholder="CEP (ex: xxxxx-xxx)" value="{{ old('cep') }}" onchange="searchNeighborhood(this.value)"/>
+                <p id="neighborhood" class="text-gray-600 text-sm mt-2"></p> 
             </div>
             <div class="mb-6 text-lg">
                 <input class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline cursor-pointer" 
                        type="submit" value="Criar Produto" />
             </div>
         </form>
+        
+        <script src="{{ asset('js/searchNeighborhood.js') }}"></script>
+        
     </body>
     
 </html>
