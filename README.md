@@ -4,7 +4,7 @@ _Este projeto consiste em um CRUD desenvolvido em Laravel 10, com rotas de cria√
 <table>
   <tr>
     <td align="center">
-      <img src="./public/assets/list.png" height="300" />
+      <img src="./public/assets/table.png" height="300" />
       <br />
       P√°gina de listagem de produtos
     </td>
