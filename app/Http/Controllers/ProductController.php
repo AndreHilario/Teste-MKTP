@@ -21,7 +21,7 @@ class ProductController extends Controller
         $validatedData = $request->validated();
 
         $newProduct = Product::create($validatedData);
-        
+
         return redirect()->route('product.index');
     }
 
