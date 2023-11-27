@@ -88,6 +88,7 @@ $ php artisan serve
 # para rodar o vite (HTML, CSS e JS)
 $ npm run dev
 ```
+6. Agora a aplicação estará disponível para você rodar em seu servidor local, no endereço `http://localhost:8000`.
 
 ## Como rodar os testes
 
