@@ -18,9 +18,16 @@ _Este projeto consiste em um CRUD desenvolvido em Laravel 10, com rotas de cria�
   </tr>
   <tr>
     <td align="center">
-      <img src="./public/assets/edit.png" height="320" />
+      <img src="./public/assets/edit.png" height="300" />
       <br />
       Página de edição
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="./public/assets/viacep.png" height="120" />
+      <br />
+      Integração com ViaCep
     </td>
   </tr>
 </table>
