@@ -18,7 +18,12 @@ class ProductFactory extends Factory
             'name' => $this->faker->sentence,
             'url' => $this->faker->url,
             'price' => $this->faker->randomFloat(2, 1, 1000),
-            'cep' => $this->faker->postcode,
+            'cep' => function () {
+                $cep = rand(10000000, 99999999); // Gera um número de CEP aleatório
+
+                // Formata o número para o padrão de CEP XXXXX-XXX
+                return substr_replace($cep, '-', 5, 0);
+            },
         ];
     }
 }
