@@ -95,7 +95,14 @@ $ php artisan serve
 # para rodar o vite (HTML, CSS e JS)
 $ npm run dev
 ```
-6. Agora a aplicação estará disponível para você rodar em seu servidor local, no endereço `http://localhost:8000`.
+6. Para preencher seu banco, automaticamente, rode o comando:
+
+```bash
+# para gerar produtos aleatórios no seu banco
+$ php artisan db:seed
+```
+
+7. Agora a aplicação estará disponível para você rodar em seu servidor local, no endereço `http://localhost:8000`.
 
 ## Como rodar os testes
 
