@@ -26,7 +26,7 @@ _Este projeto consiste em um CRUD desenvolvido em Laravel 10, com rotas de cria�
 </table>
 
 ## Sobre o projeto
-O CRUD consiste em uma API com as 4 possibilidades de tratamento, ou seja, podendo se criar, listar, editar ou remover produtos, juntamnete a um banco de dados. Além disso, ao inserir o CEP o bairro relacionado irá aparecer, de acordo com a api do ViaCep integrada no projeto.
+O CRUD consiste em uma API com as 4 possibilidades de tratamento, ou seja, podendo se criar, listar, editar ou remover produtos, juntamente a um banco de dados. Além disso, ao inserir o CEP o bairro relacionado irá aparecer, de acordo com a api do ViaCep integrada no projeto.
 
 Portanto, ele inclui:
 
@@ -46,7 +46,7 @@ Portanto, ele inclui:
 
 ## Tecnologias
 
-As tecnoligas abaixo, foram as utilizadas para desenvolver o projeto:
+As tecnologias abaixo, foram as utilizadas para desenvolver o projeto:
 
 - ![Laravel 10](https://img.shields.io/badge/Laravel%2010-Active-brightgreen)
 
@@ -68,7 +68,7 @@ As tecnoligas abaixo, foram as utilizadas para desenvolver o projeto:
 2. Instale todas as dependências
 
 ```bash
-# para dependênicas do javascript
+# para dependências do javascript
 $ npm install
 
 # para dependências do php
@@ -96,15 +96,3 @@ $ npm run dev
 ```bash
 $ php artisan test
 ```
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
