@@ -36,7 +36,7 @@
                             <td class="border border-gray-700 px-4 py-2 text-lg">{{ $product->name }}</td>
                             <td class="border border-gray-700 px-4 py-2 text-lg">{{ $product->url }}</td>
                             <td class="border border-gray-700 px-4 py-2 text-lg">R$ {{ number_format($product->price, 2, ',', '.') }}</td>
-                            <td class="border border-gray-700 px-4 py-2 text-lg">{{ $product->cep }}</td>
+                            <td class="border border-gray-700 px-4 py-2 text-lg text-center">{{ $product->cep }}</td>
                             <td class="border border-gray-700 px-4 py-2 text-lg">
                                 <a href="{{ route('product.edit', ['product' => $product]) }}" class="text-blue-600 hover:underline">Editar</a>
                             </td>
