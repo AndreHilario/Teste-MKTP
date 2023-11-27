@@ -30,7 +30,7 @@ class ProductTest extends TestCase
 
     public function test_data_format_received_correctly(): void
     {
-        $response = $this->post('/api/products', [
+        $response = $this->followingRedirects()->post('/api/products', [
             'id_code' => '12345abcde',
             'name' => 'Test',
             'url' => 'https://www.google.com.br/?hl=pt-BR',
