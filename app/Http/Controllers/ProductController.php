@@ -22,12 +22,7 @@ class ProductController extends Controller
 
         $newProduct = Product::create($validatedData);
 
-        if (config('app.env') === 'production') {
-            return redirect()->route('product.index')->with('success', 'Produto criado com sucesso!');
-        } else {
-            // Return to development environment
-            return response()->json(['success' => true, 'message' => 'Produto criado com sucesso!']);
-        }
+        return redirect()->route('product.index')->with('success', 'Produto criado com sucesso!');
     }
 
     public function edit(Product $product) {
@@ -39,12 +34,7 @@ class ProductController extends Controller
 
         $product->update($data);
 
-        if (config('app.env') === 'production') {
-            return redirect()->route('product.index')->with('success', 'Produto atualizado com sucesso!');
-        } else {
-            // Return to development environment
-            return response()->json(['success' => true, 'message' => 'Produto atualizado com sucesso!']);
-        }
+        return redirect()->route('product.index')->with('success', 'Produto atualizado com sucesso!');
     }
 
     public function delete(Product $product) {
