@@ -22,7 +22,7 @@ class StoreUpdate extends FormRequest
     public function rules(): array
     {
         return [
-            'id_code' => 'required|unique:products|regex:/^\w+$/i',
+            'id_code' => 'required|regex:/^\w+$/i',
             'name' => 'required|string|min:1|max:100',
             'url' => 'required|url',
             'price' => 'required|regex:/^\d+(\.\d{1,2})?$/',
