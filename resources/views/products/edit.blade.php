@@ -41,14 +41,14 @@
             <div class="mb-4">
                 <label class="block text-gray-700 text-lg font-bold mb-2" for="price">Preço:</label>
                 <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-lg" 
-                    id="price" type="text" name="price" placeholder="Preço" value="{{   $product->price  }}" 
+                    id="price" type="text" name="price" placeholder="Preço (ex: 100.00)" value="{{   $product->price  }}" 
                     pattern="^\d+(\.\d{1,2})?$" title="Por favor, insira um valor válido (ex: 100.00)" 
                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required />
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700 text-lg font-bold mb-2" for="cep">CEP:</label>
                 <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-lg" 
-                    id="cep" type="text" name="cep" placeholder="CEP: XXXXX-XXX" value="{{   $product->cep  }}" onchange="searchNeighborhood(this.value)" 
+                    id="cep" type="text" name="cep" placeholder="CEP (ex: xxxxx-xxx)" value="{{   $product->cep  }}" onchange="searchNeighborhood(this.value)" 
                     pattern="\d{5}-\d{3}" title="O CEP deve seguir o formato correto (ex: xxxxx-xxx)" required />
                 <p id="neighborhood" class="text-gray-600 text-sm mt-2"></p> 
             </div>
